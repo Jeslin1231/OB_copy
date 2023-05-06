@@ -36,8 +36,8 @@ mongoose
     useUnifiedTopology: true,
   })
   .then(() =>
-    app.listen(process.env.PORT, () =>
-      console.log(`Listening at ${process.env.PORT}`)
+    app.listen(process.env.PORT || 3000, () =>
+      console.log(`Listening at ${process.env.PORT || 3000}`)
     )
   )
   .catch((error) => console.log(error));
